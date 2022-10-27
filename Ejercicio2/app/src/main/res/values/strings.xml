@@ -1,0 +1,16 @@
+<resources>
+    <string name="app_name">Practica2</string>
+    <string name="roll">Roll</string>
+    <string name="jugador_2">JUGADOR 2</string>
+    <string name="jugador_1">JUGADOR 1</string>
+    <string name="new_game">NEW GAME</string>
+    <string name="hold">Hold</string>
+    <string name="_0">0</string>
+    <string name="current2">CURRENT</string>
+    <string name="_02">0</string>
+    <string name="current1">CURRENT</string>
+    <string name="ganador2">TextView</string>
+    <string name="ganador1">GANADOR</string>
+    <string name="_0_1">0</string>
+    <string name="_0_2">0</string>
+</resources>
