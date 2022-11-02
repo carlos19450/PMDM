@@ -1079,7 +1079,7 @@
                     }
                 },
                 {
-                    "source": "/home/carpui/Escritorio/PMDM/Ejercicio3/app/src/main/res/values-night/themes.xml",
+                    "source": "/home/carpui/AndroidStudioProjects/PMDM/Ejercicio3/app/src/main/res/values-night/themes.xml",
                     "from": {
                         "startLines": "2",
                         "startColumns": "4",
@@ -4210,25 +4210,6 @@
                     }
                 },
                 {
-                    "source": "/home/carpui/Escritorio/PMDM/Ejercicio3/app/src/main/res/values/themes.xml",
-                    "from": {
-                        "startLines": "2",
-                        "startColumns": "4",
-                        "startOffsets": "100",
-                        "endLines": "14",
-                        "endColumns": "12",
-                        "endOffsets": "803"
-                    },
-                    "to": {
-                        "startLines": "5671",
-                        "startColumns": "4",
-                        "startOffsets": "376989",
-                        "endLines": "5683",
-                        "endColumns": "12",
-                        "endOffsets": "377571"
-                    }
-                },
-                {
                     "source": "/home/carpui/.gradle/caches/transforms-3/0758de52a88bd0e13e04f350fcb3ffe3/transformed/appcompat-resources-1.5.1/res/values/values.xml",
                     "from": {
                         "startLines": "2,18,24,34,50",
@@ -4248,23 +4229,6 @@
                     }
                 },
                 {
-                    "source": "/home/carpui/Escritorio/PMDM/Ejercicio3/app/src/main/res/values/strings.xml",
-                    "from": {
-                        "startLines": "10,3,2,12,8,7,6,4,5,9,1,11,13,14",
-                        "startColumns": "4,4,4,4,4,4,4,4,4,4,4,4,4,4",
-                        "startOffsets": "332,101,68,397,266,233,200,134,167,299,16,365,430,466",
-                        "endColumns": "32,32,32,32,32,32,32,32,32,32,51,31,35,33",
-                        "endOffsets": "360,129,96,425,294,261,228,162,195,327,63,392,461,495"
-                    },
-                    "to": {
-                        "startLines": "1570,1571,1572,1573,1574,1575,1576,1577,1578,1579,1608,1612,1624,1642",
-                        "startColumns": "4,4,4,4,4,4,4,4,4,4,4,4,4,4",
-                        "startOffsets": "95730,95763,95796,95829,95862,95895,95928,95961,95994,96027,98009,98580,99812,101725",
-                        "endColumns": "32,32,32,32,32,32,32,32,32,32,51,31,35,33",
-                        "endOffsets": "95758,95791,95824,95857,95890,95923,95956,95989,96022,96055,98056,98607,99843,101754"
-                    }
-                },
-                {
                     "source": "/home/carpui/.gradle/caches/transforms-3/a60afa8674ff12fd760bfee68b9b782b/transformed/transition-1.2.0/res/values/values.xml",
                     "from": {
                         "startLines": "2,3,4,5,6,7,8,9,10,11",
@@ -4279,6 +4243,25 @@
                         "startOffsets": "88646,88686,89768,89950,90005,91501,91555,91607,91656,91717",
                         "endColumns": "39,46,42,54,46,53,51,48,60,49",
                         "endOffsets": "88681,88728,89806,90000,90047,91550,91602,91651,91712,91762"
+                    }
+                },
+                {
+                    "source": "/home/carpui/AndroidStudioProjects/PMDM/Ejercicio3/app/src/main/res/values/themes.xml",
+                    "from": {
+                        "startLines": "2",
+                        "startColumns": "4",
+                        "startOffsets": "100",
+                        "endLines": "14",
+                        "endColumns": "12",
+                        "endOffsets": "803"
+                    },
+                    "to": {
+                        "startLines": "5671",
+                        "startColumns": "4",
+                        "startOffsets": "376989",
+                        "endLines": "5683",
+                        "endColumns": "12",
+                        "endOffsets": "377571"
                     }
                 },
                 {
@@ -4373,7 +4356,24 @@
                     }
                 },
                 {
-                    "source": "/home/carpui/Escritorio/PMDM/Ejercicio3/app/src/main/res/values/colors.xml",
+                    "source": "/home/carpui/AndroidStudioProjects/PMDM/Ejercicio3/app/src/main/res/values/strings.xml",
+                    "from": {
+                        "startLines": "10,3,2,12,8,7,6,4,5,9,1,11,13,14",
+                        "startColumns": "4,4,4,4,4,4,4,4,4,4,4,4,4,4",
+                        "startOffsets": "332,101,68,397,266,233,200,134,167,299,16,365,430,466",
+                        "endColumns": "32,32,32,32,32,32,32,32,32,32,51,31,35,33",
+                        "endOffsets": "360,129,96,425,294,261,228,162,195,327,63,392,461,495"
+                    },
+                    "to": {
+                        "startLines": "1570,1571,1572,1573,1574,1575,1576,1577,1578,1579,1608,1612,1624,1642",
+                        "startColumns": "4,4,4,4,4,4,4,4,4,4,4,4,4,4",
+                        "startOffsets": "95730,95763,95796,95829,95862,95895,95928,95961,95994,96027,98009,98580,99812,101725",
+                        "endColumns": "32,32,32,32,32,32,32,32,32,32,51,31,35,33",
+                        "endOffsets": "95758,95791,95824,95857,95890,95923,95956,95989,96022,96055,98056,98607,99843,101754"
+                    }
+                },
+                {
+                    "source": "/home/carpui/AndroidStudioProjects/PMDM/Ejercicio3/app/src/main/res/values/colors.xml",
                     "from": {
                         "startLines": "7,2,3,4,5,6,8",
                         "startColumns": "4,4,4,4,4,4,4",

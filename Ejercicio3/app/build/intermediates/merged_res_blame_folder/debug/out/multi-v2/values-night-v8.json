@@ -21,7 +21,7 @@
                     }
                 },
                 {
-                    "source": "/home/carpui/Escritorio/PMDM/Ejercicio3/app/src/main/res/values-night/themes.xml",
+                    "source": "/home/carpui/AndroidStudioProjects/PMDM/Ejercicio3/app/src/main/res/values-night/themes.xml",
                     "from": {
                         "startLines": "2",
                         "startColumns": "4",
