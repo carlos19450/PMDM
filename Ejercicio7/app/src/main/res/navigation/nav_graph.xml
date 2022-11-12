@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/nav_graph"
+    app:startDestination="@id/miHipotecaFragment">
+
+    <fragment
+        android:id="@+id/navHostFragment"
+        android:name="com.example.ejercicio7.NavHostFragment"
+        android:label="fragment_nav_host"
+        tools:layout="@layout/fragment_nav_host" />
+    <fragment
+        android:id="@+id/miHipotecaFragment"
+        android:name="com.example.ejercicio7.MiHipotecaFragment"
+        android:label="fragment_mi_hipoteca"
+        tools:layout="@layout/fragment_mi_hipoteca" >
+        <action
+            android:id="@+id/action_miHipotecaFragment_to_navHostFragment"
+            app:destination="@id/navHostFragment" />
+    </fragment>
+</navigation>
