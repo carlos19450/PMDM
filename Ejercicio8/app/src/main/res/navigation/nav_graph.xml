@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/nav_graph"
+    app:startDestination="@id/entrenadorFragment">
+
+    <fragment
+        android:id="@+id/navHostFragment"
+        android:name="com.example.ejercicio8.NavHostFragment"
+        android:label="fragment_nav_host"
+        tools:layout="@layout/fragment_nav_host" />
+    <fragment
+        android:id="@+id/entrenadorFragment"
+        android:name="com.example.ejercicio8.EntrenadorFragment"
+        android:label="fragment_entrenador"
+        tools:layout="@layout/fragment_entrenador" >
+        <action
+            android:id="@+id/action_entrenadorFragment_to_navHostFragment"
+            app:destination="@id/navHostFragment" />
+    </fragment>
+</navigation>
