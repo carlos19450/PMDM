@@ -1,49 +1,61 @@
 package com.example.ejercicio6pmdm;
 
-import android.content.Intent;
 import android.os.Bundle;
-import android.view.View;
+import android.view.Menu;
+import android.view.MenuItem;
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.navigation.NavController;
 import androidx.navigation.fragment.NavHostFragment;
 import androidx.navigation.ui.AppBarConfiguration;
 import androidx.navigation.ui.NavigationUI;
-
-import com.example.ejercicio6pmdm.databinding.ActivityBottomBinding;
-import com.example.ejercicio6pmdm.databinding.ActivityDrawerBinding;
 import com.example.ejercicio6pmdm.databinding.ActivityMainBinding;
 
 
 public class MainActivity extends AppCompatActivity {
-    ActivityDrawerBinding binding1;
-    ActivityBottomBinding binding2;
+    ActivityMainBinding binding;
+    private NavController optionsActivity;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
+        setContentView((binding = ActivityMainBinding.inflate(getLayoutInflater())).getRoot());
+        setSupportActionBar(binding.toolbar);
         //Drawer
-        setContentView((binding1 = ActivityDrawerBinding.inflate(getLayoutInflater())).getRoot());
-
-        setSupportActionBar(binding1.toolbar);
-
         AppBarConfiguration appBarConfiguration = new AppBarConfiguration.Builder(
                 // Top-level destinations:
                 R.id.drawer1Fragment, R.id.drawer2Fragment
         )
-                .setOpenableLayout(binding1.drawerLayout)
+                .setOpenableLayout(binding.drawerLayout)
                 .build();
 
-        NavController navController1 = ((NavHostFragment) getSupportFragmentManager().findFragmentById(R.id.nav_host_fragment)).getNavController();
-        NavigationUI.setupWithNavController(binding1.navView, navController1);
-        NavigationUI.setupWithNavController(binding1.toolbar, navController1, appBarConfiguration);
+        NavController drawer = ((NavHostFragment) getSupportFragmentManager().findFragmentById(R.id.nav_host_fragment_drawer)).getNavController();
+        NavigationUI.setupWithNavController(binding.navView, drawer);
+        NavigationUI.setupWithNavController(binding.toolbar, drawer, appBarConfiguration);
         //Bottom
-        setContentView((binding2 = ActivityBottomBinding.inflate(getLayoutInflater())).getRoot());
+        NavController bottom = ((NavHostFragment) getSupportFragmentManager().findFragmentById(R.id.nav_host_fragment_botton)).getNavController();
+        NavigationUI.setupWithNavController(binding.bottomNavView, bottom);
+        NavigationUI.setupWithNavController(binding.toolbar, bottom);
+        //OptionsActivity
+        AppBarConfiguration appBarConfiguration2 = new AppBarConfiguration.Builder(
+                R.id.options1Fragment, R.id.options2Fragment
+        )
+                .build();
 
-        setSupportActionBar(binding2.toolbar);
+        optionsActivity = ((NavHostFragment) getSupportFragmentManager().findFragmentById(R.id.nav_host_fragment_options_activity)).getNavController();
+        NavigationUI.setupWithNavController(binding.toolbar, optionsActivity, appBarConfiguration2);
+    }
 
-        NavController navController2 = ((NavHostFragment) getSupportFragmentManager().findFragmentById(R.id.nav_host_fragment)).getNavController();
-        NavigationUI.setupWithNavController(binding2.bottomNavView, navController2);
-        NavigationUI.setupWithNavController(binding2.toolbar, navController2);
+    @Override
+    public boolean onCreateOptionsMenu(Menu menu) {
+        getMenuInflater().inflate(R.menu.options_menu, menu);
+        return true;
+    }
+
+    @Override
+    public boolean onOptionsItemSelected(MenuItem item) {
+        return NavigationUI.onNavDestinationSelected(item, optionsActivity)
+                || super.onOptionsItemSelected(item);
     }
 }
+
 
 
