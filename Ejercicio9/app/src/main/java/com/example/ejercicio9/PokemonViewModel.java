@@ -25,7 +25,7 @@ public class PokemonViewModel extends AndroidViewModel {
 
     public void calcular(double capital, int plazo) {
 
-        final SimuladorPokemon.Solicitud solicitud = new SimuladorPokemon.Solicitud(capital, plazo);
+        final SimuladorPokemon.Solicitud solicitud = new SimuladorPokemon.Solicitud();
 
         executor.execute(new Runnable() {
             @Override

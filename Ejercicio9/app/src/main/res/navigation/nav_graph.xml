@@ -8,7 +8,11 @@
         android:id="@+id/pokemonFragmentVerde"
         android:name="com.example.ejercicio9.PokemonFragment"
         android:label="fragment_pokemon_verde"
-        tools:layout="@layout/fragment_pokemon_verde" />
+        tools:layout="@layout/fragment_pokemon_verde" >
+        <action
+            android:id="@+id/action_pokemonFragmentVerde_to_pokemonFragmentAmarillo"
+            app:destination="@id/pokemonFragmentAmarillo" />
+    </fragment>
     <fragment
         android:id="@+id/pokemonFragmentAmarillo"
         android:name="com.example.ejercicio9.PokemonFragmentAmarillo"
