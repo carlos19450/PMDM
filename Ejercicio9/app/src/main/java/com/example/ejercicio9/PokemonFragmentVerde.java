@@ -5,13 +5,11 @@ import android.os.Bundle;
 import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
 import androidx.fragment.app.Fragment;
+import androidx.lifecycle.Observer;
 import androidx.lifecycle.ViewModelProvider;
-
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
-
-import com.example.ejercicio9.databinding.FragmentPokemonAmarilloBinding;
 import com.example.ejercicio9.databinding.FragmentPokemonVerdeBinding;
 
 public class PokemonFragmentVerde extends Fragment {
@@ -33,6 +31,19 @@ public class PokemonFragmentVerde extends Fragment {
                 int defensa = Integer.parseInt(binding.defensa.getText().toString());
                 int ataqueEspecial = Integer.parseInt(binding.ataqueEspecial.getText().toString());
                 int defensaEspecial = Integer.parseInt(binding.defensaEspecial.getText().toString());
+
+                elementosViewModel.verificarVerde(nombre, hp, ataque, defensa, ataqueEspecial, defensaEspecial);
+            }
+        });
+
+        elementosViewModel.errorPokemonNombre.observe(getViewLifecycleOwner(), new Observer<Pokemon>() {
+            @Override
+            public void onChanged(Pokemon equipoPokemon) {
+                if (equipoPokemon.getNombre() != null) {
+                    binding.nombre.setError("El campo no puede estar vacio.");
+                } else {
+                    binding.capital.setError(null);
+                }
             }
         });
     }

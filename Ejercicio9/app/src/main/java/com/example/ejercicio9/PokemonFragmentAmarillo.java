@@ -32,6 +32,8 @@ public class PokemonFragmentAmarillo extends Fragment {
                 int defensa = Integer.parseInt(binding.defensa.getText().toString());
                 int ataqueEspecial = Integer.parseInt(binding.ataqueEspecial.getText().toString());
                 int defensaEspecial = Integer.parseInt(binding.defensaEspecial.getText().toString());
+
+                elementosViewModel.verificarAmarillo(nombre, hp, ataque, defensa, ataqueEspecial, defensaEspecial);
             }
         });
     }

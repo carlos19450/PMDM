@@ -3,19 +3,19 @@
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:id="@+id/nav_graph"
-    app:startDestination="@id/pokemonFragmentVerde">
+    app:startDestination="@id/pokemonFragmentAmarillo">
     <fragment
         android:id="@+id/pokemonFragmentVerde"
-        android:name="com.example.ejercicio9.PokemonFragment"
+        android:name="com.example.ejercicio9.PokemonFragmentVerde"
         android:label="fragment_pokemon_verde"
-        tools:layout="@layout/fragment_pokemon_verde" >
-        <action
-            android:id="@+id/action_pokemonFragmentVerde_to_pokemonFragmentAmarillo"
-            app:destination="@id/pokemonFragmentAmarillo" />
-    </fragment>
+        tools:layout="@layout/fragment_pokemon_verde" />
     <fragment
         android:id="@+id/pokemonFragmentAmarillo"
         android:name="com.example.ejercicio9.PokemonFragmentAmarillo"
         android:label="fragment_pokemon_amarillo"
-        tools:layout="@layout/fragment_pokemon_amarillo" />
+        tools:layout="@layout/fragment_pokemon_amarillo" >
+        <action
+            android:id="@+id/action_pokemonFragmentAmarillo_to_pokemonFragmentVerde"
+            app:destination="@id/pokemonFragmentVerde" />
+    </fragment>
 </navigation>
