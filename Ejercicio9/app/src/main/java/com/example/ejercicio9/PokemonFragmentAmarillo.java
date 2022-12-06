@@ -6,14 +6,19 @@ import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
 import androidx.fragment.app.Fragment;
 import androidx.lifecycle.ViewModelProvider;
+import androidx.navigation.NavController;
+import androidx.navigation.Navigation;
 
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.Button;
 
 import com.example.ejercicio9.databinding.FragmentPokemonAmarilloBinding;
 
 public class PokemonFragmentAmarillo extends Fragment {
+    Button botonAmarillo;
+    NavController navController;
     private FragmentPokemonAmarilloBinding binding;
     @Override
     public View onCreateView(@NonNull LayoutInflater inflater, ViewGroup container, Bundle savedInstanceState) {
@@ -23,6 +28,8 @@ public class PokemonFragmentAmarillo extends Fragment {
     public void onViewCreated(@NonNull View view, @Nullable Bundle savedInstanceState) {
         super.onViewCreated(view, savedInstanceState);
         PokemonViewModel elementosViewModel = new ViewModelProvider(requireActivity()).get(PokemonViewModel.class);
+        botonAmarillo = view.findViewById(R.id.introducirDatosEquipoAmarilloBoton);
+        navController = Navigation.findNavController(view);
         binding.introducirDatosEquipoAmarilloBoton.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
@@ -34,6 +41,12 @@ public class PokemonFragmentAmarillo extends Fragment {
                 int defensaEspecial = Integer.parseInt(binding.defensaEspecial.getText().toString());
 
                 elementosViewModel.verificarAmarillo(nombre, hp, ataque, defensa, ataqueEspecial, defensaEspecial);
+            }
+        });
+        botonAmarillo.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                navController.navigate(R.id.action_pokemonFragmentAmarillo_to_pokemonFragmentVerde);
             }
         });
     }

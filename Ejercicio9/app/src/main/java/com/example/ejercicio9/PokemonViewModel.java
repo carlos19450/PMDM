@@ -64,9 +64,29 @@ public class PokemonViewModel extends AndroidViewModel {
 
                     @Override
                     public void cuandoHayaErrorEnElEquipoPokemon(Pokemon equipoPokemon) {
-                        datosPokemonVerde.postValue(equipoPokemon);
+                        datosPokemonAmarillo.postValue(equipoPokemon);
                     }
                 });
+            }
+        });
+    }
+    public void getHpVerde() {
+        verde = new Pokemon(nombre, hp, ataque, defensa, ataqueEspecial, defensaEspecial);
+        final SimuladorPokemon.Solicitud solicitud = new SimuladorPokemon.Solicitud(verde);
+
+        executor.execute(new Runnable() {
+            @Override
+            public void run() {
+            }
+        });
+    }
+    public void getHpAmarillo() {
+        verde = new Pokemon(nombre, hp, ataque, defensa, ataqueEspecial, defensaEspecial);
+        final SimuladorPokemon.Solicitud solicitud = new SimuladorPokemon.Solicitud(verde);
+
+        executor.execute(new Runnable() {
+            @Override
+            public void run() {
             }
         });
     }
