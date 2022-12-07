@@ -41,11 +41,6 @@ public class PokemonFragmentAmarillo extends Fragment {
                 int defensaEspecial = Integer.parseInt(binding.defensaEspecial.getText().toString());
 
                 elementosViewModel.verificarAmarillo(nombre, hp, ataque, defensa, ataqueEspecial, defensaEspecial);
-            }
-        });
-        botonAmarillo.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View view) {
                 navController.navigate(R.id.action_pokemonFragmentAmarillo_to_pokemonFragmentVerde);
             }
         });

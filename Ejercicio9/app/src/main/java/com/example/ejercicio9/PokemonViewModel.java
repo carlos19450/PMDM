@@ -15,12 +15,6 @@ public class PokemonViewModel extends AndroidViewModel {
     Pokemon verde;
     MutableLiveData<Pokemon> datosPokemonAmarillo = new MutableLiveData<>();
     MutableLiveData<Pokemon> datosPokemonVerde = new MutableLiveData<>();
-    MutableLiveData<String> errorPokemonNombre = new MutableLiveData<>();
-    MutableLiveData<Integer> errorPokemonHp = new MutableLiveData<>();
-    MutableLiveData<Integer> errorPokemonAtaque = new MutableLiveData<>();
-    MutableLiveData<Integer> errorPokemonDefensa = new MutableLiveData<>();
-    MutableLiveData<Integer> errorPokemonAtaqueEspecial = new MutableLiveData<>();
-    MutableLiveData<Integer> errorPokemonDefensaEspecial = new MutableLiveData<>();
 
     public PokemonViewModel(@NonNull Application application) {
         super(application);
@@ -70,7 +64,7 @@ public class PokemonViewModel extends AndroidViewModel {
             }
         });
     }
-    public void getHpVerde() {
+    /*public void getHpVerde() {
         verde = new Pokemon(nombre, hp, ataque, defensa, ataqueEspecial, defensaEspecial);
         final SimuladorPokemon.Solicitud solicitud = new SimuladorPokemon.Solicitud(verde);
 
@@ -89,5 +83,5 @@ public class PokemonViewModel extends AndroidViewModel {
             public void run() {
             }
         });
-    }
+    }*/
 }

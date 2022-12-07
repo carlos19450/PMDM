@@ -42,11 +42,6 @@ public class PokemonFragmentVerde extends Fragment {
                 int defensaEspecial = Integer.parseInt(binding.defensaEspecial.getText().toString());
 
                 elementosViewModel.verificarVerde(nombre, hp, ataque, defensa, ataqueEspecial, defensaEspecial);
-            }
-        });
-        botonVerde.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View view) {
                 navController.navigate(R.id.action_pokemonFragmentVerde_to_batallaFragment);
             }
         });

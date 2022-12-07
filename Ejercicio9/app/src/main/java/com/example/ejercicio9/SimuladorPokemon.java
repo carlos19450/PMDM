@@ -1,5 +1,9 @@
 package com.example.ejercicio9;
 
+import android.opengl.GLSurfaceView;
+import android.os.Debug;
+import android.util.Log;
+
 public class SimuladorPokemon {
 
     public static class Solicitud {
@@ -15,7 +19,6 @@ public class SimuladorPokemon {
     }
 
     public void verificar(Solicitud solicitud, Callback callback) {
-        Pokemon equipoPokemon;
         boolean hayError = false;
 
         if (solicitud.equipoPokemon.getNombre() == null) {
