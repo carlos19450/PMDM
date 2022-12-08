@@ -24,64 +24,39 @@ public class PokemonViewModel extends AndroidViewModel {
 
     public void verificarVerde(String nombre, int hp, int ataque, int defensa, int ataqueEspecial, int defensaEspecial) {
         verde = new Pokemon(nombre, hp, ataque, defensa, ataqueEspecial, defensaEspecial);
-        final SimuladorPokemon.Solicitud solicitud = new SimuladorPokemon.Solicitud(verde);
-
-        executor.execute(new Runnable() {
-            @Override
-            public void run() {
-                simulador.verificar(solicitud, new SimuladorPokemon.Callback() {
-                    @Override
-                    public void cuandoEsteVerificadoElEquipoPokemon (Pokemon equipoPokemon){
-                        datosPokemonVerde.postValue(equipoPokemon);
-                    }
-
-                    @Override
-                    public void cuandoHayaErrorEnElEquipoPokemon(Pokemon equipoPokemon) {
-                        datosPokemonVerde.postValue(equipoPokemon);
-                    }
-                });
-            }
-        });
+        datosPokemonVerde.postValue(verde);
     }
+
     public void verificarAmarillo(String nombre, int hp, int ataque, int defensa, int ataqueEspecial, int defensaEspecial) {
         amarillo = new Pokemon(nombre, hp, ataque, defensa, ataqueEspecial, defensaEspecial);
-        final SimuladorPokemon.Solicitud solicitud = new SimuladorPokemon.Solicitud(amarillo);
+        datosPokemonAmarillo.postValue(amarillo);
+    }
 
+    public void atacarVerde(int hp) {
         executor.execute(new Runnable() {
             @Override
             public void run() {
-                simulador.verificar(solicitud, new SimuladorPokemon.Callback() {
-                    @Override
-                    public void cuandoEsteVerificadoElEquipoPokemon (Pokemon equipoPokemon){
-                        datosPokemonAmarillo.postValue(equipoPokemon);
-                    }
 
-                    @Override
-                    public void cuandoHayaErrorEnElEquipoPokemon(Pokemon equipoPokemon) {
-                        datosPokemonAmarillo.postValue(equipoPokemon);
-                    }
+                simulador.atacarVerde(solicitud, new SimuladorHipoteca.Callback() {
+
                 });
             }
         });
+        verde.setHp(hp);
+        datosPokemonVerde.postValue(verde);
     }
-    /*public void getHpVerde() {
-        verde = new Pokemon(nombre, hp, ataque, defensa, ataqueEspecial, defensaEspecial);
-        final SimuladorPokemon.Solicitud solicitud = new SimuladorPokemon.Solicitud(verde);
 
+    public void atacarAmarillo(int hp) {
         executor.execute(new Runnable() {
             @Override
             public void run() {
-            }
-        });
-    }
-    public void getHpAmarillo() {
-        verde = new Pokemon(nombre, hp, ataque, defensa, ataqueEspecial, defensaEspecial);
-        final SimuladorPokemon.Solicitud solicitud = new SimuladorPokemon.Solicitud(verde);
 
-        executor.execute(new Runnable() {
-            @Override
-            public void run() {
+                simulador.calcular(solicitud, new SimuladorHipoteca.Callback() {
+
+                });
             }
         });
-    }*/
+        amarillo.setHp(hp);
+        datosPokemonVerde.postValue(amarillo);
+    }
 }

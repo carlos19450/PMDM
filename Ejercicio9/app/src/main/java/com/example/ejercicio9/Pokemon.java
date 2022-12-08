@@ -40,4 +40,28 @@ public class Pokemon {
     public int getDefensaEspecial() {
         return defensaEspecial;
     }
+
+    public void setNombre(String nombre) {
+        this.nombre = nombre;
+    }
+
+    public void setHp(int hp) {
+        this.hp = hp;
+    }
+
+    public void setAtaque(int ataque) {
+        this.ataque = ataque;
+    }
+
+    public void setDefensa(int defensa) {
+        this.defensa = defensa;
+    }
+
+    public void setAtaqueEspecial(int ataqueEspecial) {
+        this.ataqueEspecial = ataqueEspecial;
+    }
+
+    public void setDefensaEspecial(int defensaEspecial) {
+        this.defensaEspecial = defensaEspecial;
+    }
 }

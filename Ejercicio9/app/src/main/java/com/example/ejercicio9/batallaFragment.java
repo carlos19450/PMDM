@@ -19,8 +19,6 @@ import com.example.ejercicio9.databinding.FragmentPokemonAmarilloBinding;
 
 public class batallaFragment extends Fragment {
     private FragmentBatallaBinding binding;
-    TextView hpVerde;
-    TextView hpAmarillo;
     @Override
     public View onCreateView(@NonNull LayoutInflater inflater, ViewGroup container, Bundle savedInstanceState) {
         return (binding = FragmentBatallaBinding.inflate(inflater, container, false)).getRoot();
@@ -29,31 +27,32 @@ public class batallaFragment extends Fragment {
     @Override
     public void onViewCreated(@NonNull View view, @Nullable Bundle savedInstanceState) {
         super.onViewCreated(view, savedInstanceState);
-        hpVerde = view.findViewById(R.id.hpVerde);
-        hpAmarillo = view.findViewById(R.id.hpAmarillo);
         PokemonViewModel elementosViewModel = new ViewModelProvider(requireActivity()).get(PokemonViewModel.class);
         binding.atacarVerde.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                elementosViewModel.datosPokemonAmarillo.observe(getViewLifecycleOwner(), new Observer<Pokemon>() {
-                    @Override
-                    public void onChanged(Pokemon pokemon) {
-                        binding.hpVerde.setText(String.format("%.2f",elementosViewModel.datosPokemonAmarillo));
-                    }
-                });
-                hpVerde.setText(elementosViewModel.datosPokemonVerde.getValue().getHp());
+                elementosViewModel.atacarVerde(elementosViewModel.datosPokemonVerde.getValue().getHp());
             }
         });
+
+        elementosViewModel.datosPokemonVerde.observe(getViewLifecycleOwner(), new Observer<Pokemon>() {
+            @Override
+            public void onChanged(Pokemon pokemon) {
+                binding.hpValueVerde.setText(String.valueOf(pokemon.getHp()));
+            }
+        });
+
         binding.atacarAmarillo.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                elementosViewModel.datosPokemonAmarillo.observe(getViewLifecycleOwner(), new Observer<Pokemon>() {
-                    @Override
-                    public void onChanged(Pokemon pokemon) {
-                        binding.hpAmarillo.setText(String.format("%.2f",cuota));
-                    }
-                });
-                hpAmarillo.setText(elementosViewModel.datosPokemonAmarillo.getValue().getHp());
+                elementosViewModel.atacarAmarillo(elementosViewModel.datosPokemonAmarillo.getValue().getHp());
+            }
+        });
+
+        elementosViewModel.datosPokemonAmarillo.observe(getViewLifecycleOwner(), new Observer<Pokemon>() {
+            @Override
+            public void onChanged(Pokemon pokemon) {
+                binding.hpValueAmarillo.setText(String.valueOf(pokemon.getHp()));
             }
         });
     }

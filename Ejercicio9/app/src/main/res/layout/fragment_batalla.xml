@@ -50,11 +50,11 @@
 
     <TextView
         android:id="@+id/hpVerde"
-        android:layout_width="wrap_content"
+        android:layout_width="0dp"
         android:layout_height="wrap_content"
-        android:layout_marginStart="171dp"
-        android:layout_marginEnd="182dp"
+        android:shadowColor="#00AA17"
         android:text="HP:"
+        android:textAlignment="center"
         app:layout_constraintBottom_toTopOf="@+id/atacarVerde"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
@@ -62,14 +62,14 @@
 
     <TextView
         android:id="@+id/hpAmarillo"
-        android:layout_width="wrap_content"
+        android:layout_width="0dp"
         android:layout_height="wrap_content"
-        android:layout_marginStart="171dp"
-        android:layout_marginTop="30dp"
-        android:layout_marginEnd="182dp"
+        android:shadowColor="#CDB200"
         android:text="HP:"
+        android:textAlignment="center"
         app:layout_constraintBottom_toTopOf="@+id/atacarAmarillo"
         app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/view" />
 
@@ -77,8 +77,8 @@
         android:id="@+id/hpValueVerde"
         android:layout_width="0dp"
         android:layout_height="wrap_content"
-        android:layout_marginStart="176dp"
-        android:layout_marginEnd="177dp"
+        android:shadowColor="#00AA17"
+        android:textAlignment="center"
         app:layout_constraintBottom_toTopOf="@+id/atacarVerde"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.0"
@@ -90,41 +90,42 @@
         android:id="@+id/hpValueAmarillo"
         android:layout_width="0dp"
         android:layout_height="wrap_content"
-        android:layout_marginStart="176dp"
-        android:layout_marginEnd="177dp"
+        android:shadowColor="#CDB200"
+        android:textAlignment="center"
         app:layout_constraintBottom_toTopOf="@+id/atacarAmarillo"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintHorizontal_bias="1.0"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/hpAmarillo"
         app:layout_constraintVertical_bias="0.0" />
 
     <TextView
         android:id="@+id/equipoVerde"
-        android:layout_width="83dp"
-        android:layout_height="19dp"
-        android:layout_marginStart="171dp"
-        android:layout_marginTop="4dp"
-        android:layout_marginEnd="182dp"
-        android:layout_marginBottom="5dp"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="30dp"
+        android:shadowColor="#00AA17"
         android:text="Equipo Verde"
+        android:textAlignment="center"
         app:layout_constraintBottom_toTopOf="@+id/hpVerde"
         app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
 
     <TextView
         android:id="@+id/textView2"
-        android:layout_width="89dp"
-        android:layout_height="21dp"
-        android:layout_marginStart="168dp"
-        android:layout_marginEnd="144dp"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="30dp"
+        android:shadowColor="#CDB200"
         android:text="Equipo Amarillo"
+        android:textAlignment="center"
         app:layout_constraintBottom_toTopOf="@+id/hpAmarillo"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/view"
-        app:layout_constraintVertical_bias="0.606" />
+        app:layout_constraintVertical_bias="1.0" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>
