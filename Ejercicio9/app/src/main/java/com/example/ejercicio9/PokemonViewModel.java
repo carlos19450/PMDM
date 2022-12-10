@@ -32,31 +32,45 @@ public class PokemonViewModel extends AndroidViewModel {
         datosPokemonAmarillo.postValue(amarillo);
     }
 
-    public void atacarVerde(int hp) {
+    public void atacarVerde() {
+        SimuladorPokemon.Solicitud solicitudVerde = new SimuladorPokemon.Solicitud(datosPokemonVerde, datosPokemonAmarillo);
         executor.execute(new Runnable() {
             @Override
             public void run() {
+                simulador.atacarVerde(solicitudVerde, new SimuladorPokemon.Callback() {
+                    @Override
+                    public void cuandoEsteVerificadoElEquipoPokemonVerde(Pokemon verde) {
+                        datosPokemonVerde.postValue(verde);
+                    }
 
-                simulador.atacarVerde(solicitud, new SimuladorHipoteca.Callback() {
-
+                    @Override
+                    public void cuandoEsteVerificadoElEquipoPokemonAmarillo(Pokemon verde) {
+                        //No hace nada
+                    }
                 });
             }
         });
-        verde.setHp(hp);
         datosPokemonVerde.postValue(verde);
     }
 
-    public void atacarAmarillo(int hp) {
+    public void atacarAmarillo() {
+        SimuladorPokemon.Solicitud solicitudAmarillo = new SimuladorPokemon.Solicitud(datosPokemonVerde, datosPokemonAmarillo);
         executor.execute(new Runnable() {
             @Override
             public void run() {
+                simulador.atacarAmarillo(solicitudAmarillo, new SimuladorPokemon.Callback() {
+                    @Override
+                    public void cuandoEsteVerificadoElEquipoPokemonAmarillo(Pokemon amarillo) {
+                        datosPokemonAmarillo.postValue(amarillo);
+                    }
 
-                simulador.calcular(solicitud, new SimuladorHipoteca.Callback() {
-
+                    @Override
+                    public void cuandoEsteVerificadoElEquipoPokemonVerde(Pokemon amarillo) {
+                        //No hace nada
+                    }
                 });
             }
         });
-        amarillo.setHp(hp);
-        datosPokemonVerde.postValue(amarillo);
+        datosPokemonAmarillo.postValue(amarillo);
     }
 }

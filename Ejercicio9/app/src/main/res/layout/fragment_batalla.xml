@@ -25,9 +25,9 @@
         android:layout_marginStart="155dp"
         android:layout_marginTop="200dp"
         android:layout_marginEnd="162dp"
-        android:layout_marginBottom="30dp"
-        android:background="#00AA17"
-        android:text="Atacar"
+        android:layout_marginBottom="40dp"
+        android:background="#00FF23"
+        android:text="Atacar a Verde"
         app:layout_constraintBottom_toTopOf="@+id/view"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
@@ -42,7 +42,7 @@
         android:layout_marginEnd="162dp"
         android:layout_marginBottom="30dp"
         android:background="#CDB200"
-        android:text="Atacar"
+        android:text="Atacar a Amarillo"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
@@ -57,13 +57,14 @@
         android:textAlignment="center"
         app:layout_constraintBottom_toTopOf="@+id/atacarVerde"
         app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/equipoVerde" />
 
     <TextView
         android:id="@+id/hpAmarillo"
         android:layout_width="0dp"
-        android:layout_height="wrap_content"
+        android:layout_height="19dp"
         android:shadowColor="#CDB200"
         android:text="HP:"
         android:textAlignment="center"
@@ -94,7 +95,7 @@
         android:textAlignment="center"
         app:layout_constraintBottom_toTopOf="@+id/atacarAmarillo"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="1.0"
+        app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/hpAmarillo"
         app:layout_constraintVertical_bias="0.0" />
@@ -114,10 +115,10 @@
         app:layout_constraintTop_toTopOf="parent" />
 
     <TextView
-        android:id="@+id/textView2"
+        android:id="@+id/equipoAmarillo"
         android:layout_width="0dp"
         android:layout_height="wrap_content"
-        android:layout_marginTop="30dp"
+        android:layout_marginTop="50dp"
         android:shadowColor="#CDB200"
         android:text="Equipo Amarillo"
         android:textAlignment="center"
@@ -127,5 +128,27 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/view"
         app:layout_constraintVertical_bias="1.0" />
+
+    <TextView
+        android:id="@+id/textoVerde"
+        android:layout_width="0dp"
+        android:layout_height="62dp"
+        app:layout_constraintBottom_toTopOf="@+id/atacarVerde"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/hpValueVerde"
+        app:layout_constraintVertical_bias="0.882" />
+
+    <TextView
+        android:id="@+id/textoAmarillo"
+        android:layout_width="0dp"
+        android:layout_height="62dp"
+        app:layout_constraintBottom_toTopOf="@+id/atacarAmarillo"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/hpValueAmarillo"
+        app:layout_constraintVertical_bias="0.882" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>
