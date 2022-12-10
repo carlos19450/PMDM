@@ -13,10 +13,7 @@
     <option name="autoReloadType" value="NONE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="b37a3dfd-2516-4657-a707-85937e1092ce" name="Changes" comment="Ejercicio 9 terminado">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/java/com/example/ejercicio9/batallaFragment.java" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/com/example/ejercicio9/batallaFragment.java" afterDir="false" />
-    </list>
+    <list default="true" id="b37a3dfd-2516-4657-a707-85937e1092ce" name="Changes" comment="Ejercicio 9 terminado" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -164,7 +161,14 @@
       <option name="project" value="LOCAL" />
       <updated>1670709108768</updated>
     </task>
-    <option name="localTasksCounter" value="3" />
+    <task id="LOCAL-00003" summary="Ejercicio 9 terminado">
+      <created>1670709237902</created>
+      <option name="number" value="00003" />
+      <option name="presentableId" value="LOCAL-00003" />
+      <option name="project" value="LOCAL" />
+      <updated>1670709237902</updated>
+    </task>
+    <option name="localTasksCounter" value="4" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
