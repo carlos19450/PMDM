@@ -13,7 +13,21 @@
     <option name="autoReloadType" value="NONE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="b37a3dfd-2516-4657-a707-85937e1092ce" name="Changes" comment="Ejercicio 9 terminado" />
+    <list default="true" id="b37a3dfd-2516-4657-a707-85937e1092ce" name="Changes" comment="Ejercicio 9 terminado">
+      <change afterPath="$PROJECT_DIR$/../Ejercicio11/app/src/main/java/models/PokemonList.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Ejercicio11/.idea/gradle.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../Ejercicio11/.idea/gradle.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Ejercicio11/app/src/main/java/com/example/ejercicio11/MainActivity.java" beforeDir="false" afterPath="$PROJECT_DIR$/../Ejercicio11/app/src/main/java/com/example/ejercicio11/MainActivity.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Ejercicio11/app/src/main/java/com/example/ejercicio11/Pokemon.java" beforeDir="false" afterPath="$PROJECT_DIR$/../Ejercicio11/app/src/main/java/models/Pokemon.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Ejercicio11/app/src/main/java/poqueapi/PokeApiService.java" beforeDir="false" afterPath="$PROJECT_DIR$/../Ejercicio11/app/src/main/java/poqueapi/PokeApiService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.gradle/7.4/executionHistory/executionHistory.bin" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/7.4/executionHistory/executionHistory.bin" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.gradle/7.4/executionHistory/executionHistory.lock" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/7.4/executionHistory/executionHistory.lock" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.gradle/7.4/fileHashes/fileHashes.bin" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/7.4/fileHashes/fileHashes.bin" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.gradle/7.4/fileHashes/fileHashes.lock" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/7.4/fileHashes/fileHashes.lock" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.gradle/7.4/fileHashes/resourceHashesCache.bin" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/7.4/fileHashes/resourceHashesCache.bin" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.gradle/buildOutputCleanup/buildOutputCleanup.lock" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/buildOutputCleanup/buildOutputCleanup.lock" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.gradle/file-system.probe" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/file-system.probe" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -70,7 +84,7 @@
     <property name="RunOnceActivity.cidr.known.project.marker" value="true" />
     <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
     <property name="cidr.known.project.marker" value="true" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/../Ejercicio7" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
   </component>
   <component name="RecentsManager">
     <key name="CreateClassDialog.RecentsKey">

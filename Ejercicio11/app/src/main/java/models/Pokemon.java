@@ -1,4 +1,4 @@
-package com.example.ejercicio11;
+package models;
 
 public class Pokemon {
     private String name;
