@@ -16,4 +16,7 @@ public interface PokeApiService {
 
     @GET("pokemon")
     Call<NameList> getNameList(@Query("limit") int limit, @Query("offset") int offset);
+
+    @GET("stats/{name}")
+    Call<Pokemon> getMoveById(@Path("name") String id);
 }
